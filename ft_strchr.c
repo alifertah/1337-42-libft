@@ -6,7 +6,7 @@
 /*   By: alfertah <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 15:25:09 by alfertah          #+#    #+#             */
-/*   Updated: 2021/11/05 18:08:26 by alfertah         ###   ########.fr       */
+/*   Updated: 2021/11/17 23:23:41 by alfertah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,10 @@ char	*ft_strchr(const char *str, int c)
 }
 /*int main()
 {
-    const char str[] = "";
-   const char ch = 'l';
-   char *ret;
+   char str[] = "fglola";
+   char ch = 'l';
 
-   ret = ft_strchr(str, ch);
-
-   printf("String after |%c| is - |%s|\n", ch, ret);
+   printf("%s", ft_strchr(str, ch));
 
     return 0;
 }*/

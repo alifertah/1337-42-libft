@@ -6,7 +6,7 @@
 /*   By: alfertah <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 12:11:18 by alfertah          #+#    #+#             */
-/*   Updated: 2021/11/07 12:32:19 by alfertah         ###   ########.fr       */
+/*   Updated: 2021/11/17 23:25:47 by alfertah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -27,7 +27,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 /*int main () {
    char str[] = "0123"; 
    char ch = '0';
-   char *c = ft_memchr(str, ch ,3);
+   char *c = ft_memchr(str, ch ,2);
    printf("%s",c);
 
    return(0);
