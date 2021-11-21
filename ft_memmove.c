@@ -5,10 +5,11 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: alfertah <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/04 10:57:06 by alfertah          #+#    #+#             */
-/*   Updated: 2021/11/17 22:04:15 by alfertah         ###   ########.fr       */
+/*   Created: 2021/11/20 21:30:40 by alfertah          #+#    #+#             */
+/*   Updated: 2021/11/20 21:30:43 by alfertah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
@@ -36,11 +37,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-/*int main()
-{
-    char a[] = "abcdef";
-    printf("%s\n", a);
-    ft_memmove(a +2  , a, 3 * sizeof(char));
-	printf("%s\n",a);
-	return 0;
-}*/

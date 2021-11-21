@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: alfertah <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/13 15:13:13 by alfertah          #+#    #+#             */
-/*   Updated: 2021/11/17 03:21:57 by alfertah         ###   ########.fr       */
+/*   Created: 2021/11/20 21:35:30 by alfertah          #+#    #+#             */
+/*   Updated: 2021/11/20 21:35:32 by alfertah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include"libft.h"
 
 static int	ft_start(char const *s1, char const *set)
 {
@@ -64,7 +64,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(copy, s1 + start, end - start + 1);
 	return (copy);
 }
-/*int main()
-{
-    printf("%s", ft_strtrim("++++hello++++", "+"));
-}*/

@@ -5,10 +5,11 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: alfertah <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/14 23:46:21 by alfertah          #+#    #+#             */
-/*   Updated: 2021/11/14 23:46:35 by alfertah         ###   ########.fr       */
+/*   Created: 2021/11/20 21:34:22 by alfertah          #+#    #+#             */
+/*   Updated: 2021/11/20 21:34:23 by alfertah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))

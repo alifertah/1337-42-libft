@@ -5,35 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: alfertah <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/03 11:48:21 by alfertah          #+#    #+#             */
-/*   Updated: 2021/11/10 17:39:32 by alfertah         ###   ########.fr       */
+/*   Created: 2021/11/20 21:30:26 by alfertah          #+#    #+#             */
+/*   Updated: 2021/11/20 21:30:27 by alfertah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include"libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	unsigned long	i;
-	char			*csrc;
-	char			*cdest;
+	size_t	i;
 
-	csrc = (char *)src;
-	cdest = (char *)dest;
 	i = 0;
+	if (dst == src || !n)
+		return (dst);
 	while (i < n)
 	{
-		cdest[i] = csrc[i];
+		*((unsigned char *)dst + i) = *((unsigned char *)src + i);
 		i++;
 	}
-	return (cdest);
+	return (dst);
 }
-/*int main()
-{
-    char a[20] = "scofio";
-    char b[20] = "";
-    ft_memcpy(b,a,sizeof(a));
-    printf("%s\n", b);
-    return(0);
-}*/

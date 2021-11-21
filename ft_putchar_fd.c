@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: alfertah <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/15 22:34:34 by alfertah          #+#    #+#             */
-/*   Updated: 2021/11/15 22:35:34 by alfertah         ###   ########.fr       */
+/*   Created: 2021/11/20 21:31:13 by alfertah          #+#    #+#             */
+/*   Updated: 2021/11/20 21:31:16 by alfertah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include"libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {

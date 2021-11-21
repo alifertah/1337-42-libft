@@ -5,11 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: alfertah <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/12 15:43:42 by alfertah          #+#    #+#             */
-/*   Updated: 2021/11/18 01:30:44 by alfertah         ###   ########.fr       */
+/*   Created: 2021/11/20 21:33:31 by alfertah          #+#    #+#             */
+/*   Updated: 2021/11/20 21:33:32 by alfertah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
+
+#include"libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -39,9 +40,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	return (NULL);
 }
-/*int main()
-{   
-	//ft_strjoin("ali","fertah");
-	printf("%s",ft_strjoin("","ahlvasbalfglfouktygjh"));
-	return 0;
-}*/

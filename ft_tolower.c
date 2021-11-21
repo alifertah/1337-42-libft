@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: alfertah <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/05 12:23:48 by alfertah          #+#    #+#             */
-/*   Updated: 2021/11/05 12:26:02 by alfertah         ###   ########.fr       */
+/*   Created: 2021/11/20 21:35:58 by alfertah          #+#    #+#             */
+/*   Updated: 2021/11/20 21:36:00 by alfertah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,10 @@
 
 int	ft_tolower(int c)
 {
-	if (c >= 65 && c <= 90)
-		return (c + 32);
+	if (c >= 'A' && c <= 'Z')
+	{
+		c += 32;
+		return (c);
+	}
 	return (c);
 }
-/*int main()
-{
-    printf("%c",ft_tolower(65));
-    return 0;
-}*/

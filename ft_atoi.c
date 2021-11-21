@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: alfertah <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 11:44:52 by alfertah          #+#    #+#             */
-/*   Updated: 2021/11/08 11:45:07 by alfertah         ###   ########.fr       */
+/*   Created: 2021/11/20 21:20:02 by alfertah          #+#    #+#             */
+/*   Updated: 2021/11/20 21:20:34 by alfertah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -15,36 +15,24 @@ int	ft_atoi(const char *str)
 {
 	int	b;
 	int	res;
+	int	i;
 
+	i = 0;
 	b = 1;
 	res = 0;
-	while (*str == ' ' || *str == '\t' || *str == '\n' || *str == '\v'
-		|| *str == '\f' || *str == '\r')
-		str++;
-	if (*str == '-' || *str == '+')
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' || str[i] == '\v'
+		|| str[i] == '\f' || str[i] == '\r')
+		i++;
+	if (str[i] == '-' || str[i] == '+')
 	{
-		if (*str == '-')
+		if (str[i] == '-')
 			b *= -1;
-		str++;
+		i++;
 	}
-	while (*str >= '0' && *str <= '9')
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		res = res * 10 + *str - '0';
-		str++;
+		res = res * 10 + str[i] - '0';
+		i++;
 	}
 	return (res * b);
 }
-/*int main () {
-   int val;
-   char str[20];
-   
-   strcpy(str, "-98993489");
-   val = ft_atoi(str);
-   printf("String value = %s, Int value = %d\n", str, val);
-
-   strcpy(str, "tutorialspoint.com");
-   val = ft_atoi(str);
-   printf("String value = %s, Int value = %d\n", str, val);
-
-   return(0);
-}*/

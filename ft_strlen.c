@@ -5,18 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: alfertah <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 09:47:22 by alfertah          #+#    #+#             */
-/*   Updated: 2021/11/05 11:38:39 by alfertah         ###   ########.fr       */
+/*   Created: 2021/11/20 21:34:05 by alfertah          #+#    #+#             */
+/*   Updated: 2021/11/20 21:34:06 by alfertah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
 
-size_t	ft_strlen(const char *str)
+#include"libft.h"
+
+size_t	ft_strlen(const char *s)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
-	while (str[i])
+	if (!s[i])
+		return (0);
+	while (s[i])
 		i++;
 	return (i);
 }

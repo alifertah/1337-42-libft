@@ -5,30 +5,38 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: alfertah <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/11 22:06:35 by alfertah          #+#    #+#             */
-/*   Updated: 2021/11/12 14:30:29 by alfertah         ###   ########.fr       */
+/*   Created: 2021/11/20 21:35:44 by alfertah          #+#    #+#             */
+/*   Updated: 2021/11/20 21:35:47 by alfertah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
+
+#include"libft.h"
+
+static size_t	ft_min(char const *s, unsigned int start, size_t len)
+{
+	size_t	slen;
+
+	slen = ft_strlen(s) - start;
+	if (len < slen)
+		return (len);
+	else
+		return (slen);
+}
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*new;
-	size_t	i;
-	size_t	j;
+	char	*dest;
+	size_t	min;
 
-	new = (char *) malloc (sizeof(char) * len + 1);
-	if (!new)
-		return (0);
-	i = start;
-	j = 0;
-	while (i < ft_strlen(s) && j < len)
-		new[j++] = s[i++];
-	new[j] = '\0';
-	return (new);
+	if (!s)
+		return (NULL);
+	if ((size_t)start > ft_strlen(s))
+		return (ft_strdup(""));
+	min = ft_min(s, start, len);
+	dest = (char *)malloc(sizeof(char) * min + 1);
+	if (dest == NULL)
+		return (NULL);
+	ft_memcpy(dest, s + start, min);
+	dest[len] = '\0';
+	return (dest);
 }
-/*int main()
-{
-	char *a = "fertah";
-	printf("%s",ft_substr(a, 1, 100));
-} */

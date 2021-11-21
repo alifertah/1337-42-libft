@@ -5,10 +5,11 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: alfertah <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/14 20:08:52 by alfertah          #+#    #+#             */
-/*   Updated: 2021/11/18 01:31:39 by alfertah         ###   ########.fr       */
+/*   Created: 2021/11/20 21:29:07 by alfertah          #+#    #+#             */
+/*   Updated: 2021/11/20 21:29:11 by alfertah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 static int	itoa_isnegative(int *n)
@@ -42,7 +43,7 @@ char	*ft_itoa(int n)
 	int		negative;
 	char	*str;
 
-	if (n == -2147483648)
+	if (n == (-2147483648))
 		return (ft_strdup("-2147483648"));
 	negative = itoa_isnegative(&n);
 	len = count_len(n) + negative;
@@ -61,7 +62,5 @@ char	*ft_itoa(int n)
 }
 /*int main()
 {
-    int i = 165487863;
-    printf("%s",ft_itoa(i));	
-}
-*/
+	printf("%s",ft_itoa(145263565));
+}*/

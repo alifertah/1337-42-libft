@@ -5,29 +5,30 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: alfertah <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/14 18:59:31 by alfertah          #+#    #+#             */
-/*   Updated: 2021/11/16 00:48:20 by alfertah         ###   ########.fr       */
+/*   Created: 2021/11/20 21:32:26 by alfertah          #+#    #+#             */
+/*   Updated: 2021/11/20 21:32:29 by alfertah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-int	world_count(char const *s, char c)
+static int	count_word(const char *s, char c)
 {
 	int	i;
-	int	world;
+	int	word;
 
 	i = 0;
-	world = 0;
+	word = 0;
 	while (s[i])
 	{
-		if ((s[i] != c) && (s[i + 1] == c || s[i + 1] == '\0'))
-			world ++;
+		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
+			word++;
 		i++;
 	}
-	return (world);
+	return (word);
 }
 
-int	world_len(char const *s, char c)
+static int	len_word(const char *s, char c)
 {
 	int	i;
 	int	len;
@@ -36,62 +37,50 @@ int	world_len(char const *s, char c)
 	len = 0;
 	while (s[i] != c && s[i] != '\0')
 	{
-		len++;
 		i++;
+		len++;
 	}
 	return (len);
 }
 
-char	**copy(char const *s, char c, int world, char **splited)
+static char	**fill(const char *s, char c, int word, char **splitted)
 {
 	int	i;
 	int	j;
 	int	len;
 
 	i = 0;
-	while (i < world)
+	while (i < word)
 	{
 		while (*s == c)
 			s++;
-		len = world_len(s, c);
-		splited[i] = (char *) malloc(sizeof(char) * (len + 1));
-		if (splited == NULL)
+		len = len_word(s, c);
+		splitted[i] = (char *)malloc(sizeof(char) * (len + 1));
+		if (splitted == NULL)
 			return (NULL);
 		j = 0;
 		while (j < len)
-			splited[i][j++] = *s++;
-		splited[i][j] = '\0';
+		{
+			splitted[i][j++] = *s++;
+		}
+		splitted[i][j] = '\0';
 		i++;
 	}
-	splited[i] = NULL;
-	return (splited);
+	splitted[i] = NULL;
+	return (splitted);
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_split(char	const *s, char c)
 {
-	int		i;
+	int		word;
 	char	**splited;
 
 	if (s == NULL)
 		return (NULL);
-	i = world_count(s, c);
-	splited = (char **)malloc(sizeof(char *) * (i + 1));
-	if (!splited)
+	word = count_word(s, c);
+	splited = (char **)malloc(sizeof(char *) * (word + 1));
+	if (splited == NULL)
 		return (NULL);
-	splited = copy(s, c, i, splited);
+	splited = fill(s, c, word, splited);
 	return (splited);
 }
-/*int main()
-{
-   char a[] = "kk hello";
-   char **dest = ft_split(a,' ');
-   int i,j;
-   i = 0;
-   while(i < 2)
-   {
-       
-       printf("%s\n",dest[i]);
-           
-       i++;
-   }
-}*/

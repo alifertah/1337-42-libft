@@ -5,33 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: alfertah <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/05 15:25:09 by alfertah          #+#    #+#             */
-/*   Updated: 2021/11/17 23:23:41 by alfertah         ###   ########.fr       */
+/*   Created: 2021/11/20 21:32:40 by alfertah          #+#    #+#             */
+/*   Updated: 2021/11/20 21:32:41 by alfertah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	if (str == NULL)
-		return (0);
-	while (*str)
+	unsigned int	i;
+
+	i = 0;
+	while (s[i])
 	{
-		if (*str == c)
-			return ((char *)str);
-		str++;
+		if (s[i] == (char)c)
+			return ((char *)s + i);
+		i++;
 	}
-	if (c == '\0')
-		return ((char *)str);
-	return (0);
+	if (s[i] == (char)c)
+		return ((char *)s + i);
+	return (NULL);
 }
-/*int main()
-{
-   char str[] = "fglola";
-   char ch = 'l';
-
-   printf("%s", ft_strchr(str, ch));
-
-    return 0;
-}*/
